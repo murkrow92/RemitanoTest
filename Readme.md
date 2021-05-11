@@ -1,8 +1,8 @@
-# TekoTest
+# RemitanoTest
 
 [![Moove It](https://circleci.com/gh/moove-it/react-native-template.svg?style=svg)](https://app.circleci.com/pipelines/github/moove-it/react-native-template?branch=master)
 
-This project aims to be an example for UI-SDK Teko client to search product from Teko Services.
+This project aims to be an example for UI-SDK Remitano client to search product from Remitano Services.
 
 ## Prerequisites
 
