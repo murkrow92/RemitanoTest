@@ -7,7 +7,7 @@ import RootContainer from './App/Containers/RootContainer/RootContainer';
 enableScreens();
 const store = reduxStore();
 
-function RemitanoBrowserApp() {
+function BrowserApp() {
   return (
     <Provider store={store}>
       <RootContainer />
@@ -15,4 +15,4 @@ function RemitanoBrowserApp() {
   );
 }
 
-export default RemitanoBrowserApp;
+export default BrowserApp;
