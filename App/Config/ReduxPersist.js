@@ -8,7 +8,7 @@ const REDUX_PERSIST = {
     key: 'root',
     storage: AsyncStorage,
     blacklist: [],
-    whitelist: ['product'],
+    whitelist: ['browser'],
     stateReconciler: false,
     transforms: [immutablePersistenceTransform]
   }

@@ -1,9 +1,9 @@
 import { createActions } from 'reduxsauce';
 
 const { Types, Creators } = createActions({
-  changeQuantity: ['product', 'amount']
+  changeConnectionState: ['connectionInfo']
 });
 
-export const CartTypes = Types;
+export const BrowserTypes = Types;
 
 export default Creators;
