@@ -1,7 +1,7 @@
 import { all } from 'redux-saga/effects';
 
-import productSagas from './mapProductSagas';
+import browserSagas from './mapBrowserSagas';
 
 export default function* root() {
-  yield all([...productSagas]);
+  yield all([...browserSagas]);
 }
