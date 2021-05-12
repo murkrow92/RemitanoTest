@@ -1,13 +1,14 @@
 import React from 'react';
 import { Text } from 'react-native';
-import styles from './HomeScreenStyle';
+import { WebView } from 'react-native-webview';
 import HeaderBar from './HeaderBar/HeaderBar';
+import styles from './HomeScreenStyle';
 
 function HomeScreen() {
   return (
     <>
       <HeaderBar />
-      <Text>Hello World</Text>
+      <WebView source={{ uri: 'https://google.com' }} style={{}} />
     </>
   );
 }

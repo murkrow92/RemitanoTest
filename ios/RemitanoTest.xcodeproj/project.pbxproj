@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* RemitanoTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RemitanoTestTests.m */; };
+		131902CB783B4F94BA4C1469 /* FontsFree-Net-SFProText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01F6EABDA2E740E29D8B9941 /* FontsFree-Net-SFProText-Bold.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		84B7D943F7A94F92AA7970A3 /* FontsFree-Net-SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 680BE0E44587497FA97A6AE0 /* FontsFree-Net-SFProText-Regular.ttf */; };
 		A5487CCFEE1E77CB070C0001 /* libPods-RemitanoTest-RemitanoTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7685FB637E5E790329515EE9 /* libPods-RemitanoTest-RemitanoTestTests.a */; };
 		ABFF78D679BA569CC1473207 /* libPods-RemitanoTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A6091E92D1AA677E792206 /* libPods-RemitanoTest.a */; };
-		131902CB783B4F94BA4C1469 /* FontsFree-Net-SFProText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01F6EABDA2E740E29D8B9941 /* FontsFree-Net-SFProText-Bold.ttf */; };
-		84B7D943F7A94F92AA7970A3 /* FontsFree-Net-SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 680BE0E44587497FA97A6AE0 /* FontsFree-Net-SFProText-Regular.ttf */; };
-		B180C070E45F476EA8F772C6 /* antfill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0362F8AF0874A5BB9D6BB40 /* antfill.ttf */; };
 		AFA8D79A8E0F48258AE4A951 /* antoutline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35EE2AD45C8E4F818FB34DA0 /* antoutline.ttf */; };
+		B180C070E45F476EA8F772C6 /* antfill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0362F8AF0874A5BB9D6BB40 /* antfill.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,7 @@
 		00E356EE1AD99517003FC87E /* RemitanoTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemitanoTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RemitanoTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemitanoTestTests.m; sourceTree = "<group>"; };
+		01F6EABDA2E740E29D8B9941 /* FontsFree-Net-SFProText-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FontsFree-Net-SFProText-Bold.ttf"; path = "../App/Assets/Fonts/FontsFree-Net-SFProText-Bold.ttf"; sourceTree = "<group>"; };
 		0C61F5227CB0F3609297CFFB /* Pods-RemitanoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemitanoTest.debug.xcconfig"; path = "Target Support Files/Pods-RemitanoTest/Pods-RemitanoTest.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RemitanoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemitanoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RemitanoTest/AppDelegate.h; sourceTree = "<group>"; };
@@ -42,16 +43,15 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RemitanoTest/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RemitanoTest/main.m; sourceTree = "<group>"; };
 		2905C30A63E62DBB21ED6853 /* Pods-RemitanoTest-RemitanoTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemitanoTest-RemitanoTestTests.debug.xcconfig"; path = "Target Support Files/Pods-RemitanoTest-RemitanoTestTests/Pods-RemitanoTest-RemitanoTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		35EE2AD45C8E4F818FB34DA0 /* antoutline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = antoutline.ttf; path = "../node_modules/@ant-design/icons-react-native/fonts/antoutline.ttf"; sourceTree = "<group>"; };
 		62A6091E92D1AA677E792206 /* libPods-RemitanoTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RemitanoTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63618AEFF96BF1FE06CB01B4 /* Pods-RemitanoTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemitanoTest.release.xcconfig"; path = "Target Support Files/Pods-RemitanoTest/Pods-RemitanoTest.release.xcconfig"; sourceTree = "<group>"; };
+		680BE0E44587497FA97A6AE0 /* FontsFree-Net-SFProText-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FontsFree-Net-SFProText-Regular.ttf"; path = "../App/Assets/Fonts/FontsFree-Net-SFProText-Regular.ttf"; sourceTree = "<group>"; };
 		76764D1AF67B5C28CBD7F864 /* Pods-RemitanoTest-RemitanoTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemitanoTest-RemitanoTestTests.release.xcconfig"; path = "Target Support Files/Pods-RemitanoTest-RemitanoTestTests/Pods-RemitanoTest-RemitanoTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		7685FB637E5E790329515EE9 /* libPods-RemitanoTest-RemitanoTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RemitanoTest-RemitanoTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RemitanoTest/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A0362F8AF0874A5BB9D6BB40 /* antfill.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = antfill.ttf; path = "../node_modules/@ant-design/icons-react-native/fonts/antfill.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		01F6EABDA2E740E29D8B9941 /* FontsFree-Net-SFProText-Bold.ttf */ = {isa = PBXFileReference; name = "FontsFree-Net-SFProText-Bold.ttf"; path = "../App/Assets/Fonts/FontsFree-Net-SFProText-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		680BE0E44587497FA97A6AE0 /* FontsFree-Net-SFProText-Regular.ttf */ = {isa = PBXFileReference; name = "FontsFree-Net-SFProText-Regular.ttf"; path = "../App/Assets/Fonts/FontsFree-Net-SFProText-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A0362F8AF0874A5BB9D6BB40 /* antfill.ttf */ = {isa = PBXFileReference; name = "antfill.ttf"; path = "../node_modules/@ant-design/icons-react-native/fonts/antfill.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		35EE2AD45C8E4F818FB34DA0 /* antoutline.ttf */ = {isa = PBXFileReference; name = "antoutline.ttf"; path = "../node_modules/@ant-design/icons-react-native/fonts/antoutline.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +159,7 @@
 			sourceTree = "<group>";
 		};
 		DFB55BD024B34E75BBC2BDD1 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				01F6EABDA2E740E29D8B9941 /* FontsFree-Net-SFProText-Bold.ttf */,
 				680BE0E44587497FA97A6AE0 /* FontsFree-Net-SFProText-Regular.ttf */,
@@ -167,8 +167,8 @@
 				35EE2AD45C8E4F818FB34DA0 /* antoutline.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
