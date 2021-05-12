@@ -3,7 +3,7 @@ import { BLACK_30, COOL_GREY, TOMATO, WHITE } from 'Themes/Colors';
 import { FONT_SF_PRO_TEXT_REGULAR } from 'Themes/Fonts';
 
 export default StyleSheet.create({
-  productSearchBarContainer: {
+  addressBarContainer: {
     flexDirection: 'row',
     width: '100%',
     backgroundColor: TOMATO,
@@ -14,11 +14,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  iconArrowBack: {
-    width: 24,
-    height: 24
-  },
-  searchInputContainer: {
+  addressInputContainer: {
     flexDirection: 'row',
     marginLeft: 12,
     flex: 1,
@@ -38,11 +34,9 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  iconArrowSearch: {
-    width: 16,
-    height: 16
-  },
-  searchInput: {
+  address: {
+    paddingTop: 4,
+    paddingBottom: 4,
     marginLeft: 8,
     marginRight: 8,
     paddingLeft: 0,
