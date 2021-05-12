@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Text, RefreshControl, ScrollView } from 'react-native';
 import { TOMATO, WHITE } from 'Themes/Colors';
 import { WebView } from 'react-native-webview';
@@ -6,6 +7,7 @@ import HeaderBar from './HeaderBar/HeaderBar';
 import styles from './HomeScreenStyle';
 
 function HomeScreen() {
+  const currentPage = useSelector(state => state.browser.currentPage);
   const webview = useRef(null);
 
   const [scrollViewHeight, setScrollViewHeight] = useState(0);
@@ -38,7 +40,7 @@ function HomeScreen() {
           />
         }>
         <WebView
-          source={{ uri: 'https://google.com' }}
+          source={{ uri: currentPage }}
           ref={webview}
           style={wevViewStyle}
         />

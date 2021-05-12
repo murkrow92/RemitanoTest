@@ -1,7 +1,7 @@
 import { createActions } from 'reduxsauce';
 
 const { Types, Creators } = createActions({
-  changeConnectionState: ['connectionInfo']
+  goToHomePage: []
 });
 
 export const BrowserTypes = Types;

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
 import { useSelector } from 'react-redux';
+import { useNavigation } from '@react-navigation/native';
 import OpacityButton from 'Components/Button/OpacityButton';
 import doNothing from 'Utils/doNothing';
 import styles from './HeaderBarStyle';
@@ -9,8 +10,11 @@ import HomeButton from './HomeButton';
 
 function HeaderBar(props) {
   const currentPage = useSelector(state => state.browser.currentPage);
+  const navigation = useNavigation();
 
-  function onPress() {}
+  function onPress() {
+    navigation.goBack();
+  }
 
   return (
     <View style={styles.addressBarContainer}>
