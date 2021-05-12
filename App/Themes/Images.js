@@ -7,6 +7,7 @@ import NoImage from 'Assets/Images/NoImage/small.png';
 import IconPlus from 'Assets/Images/IconPlus/addCircle.png';
 import IconMinus from 'Assets/Images/IconMinus/removeCircle.png';
 import IconAddToCard from 'Assets/Images/IconAddToCard/addToCart.png';
+import IconHome from 'Assets/Images/IconHome/iconHome.png';
 
 const images = {
   iconArrowBack: IconArrowBack,
@@ -17,7 +18,8 @@ const images = {
   iconCart: IconCart,
   iconPlus: IconPlus,
   iconMinus: IconMinus,
-  iconAddToCard: IconAddToCard
+  iconAddToCard: IconAddToCard,
+  iconHome: IconHome
 };
 
 export default images;
