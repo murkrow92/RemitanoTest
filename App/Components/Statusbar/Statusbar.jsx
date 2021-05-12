@@ -12,7 +12,7 @@ function Statusbar(props) {
 
   return (
     <View style={[styles.statusbarContainer]}>
-      <StatusBar translucent={false} barStyle="dark-content" />
+      <StatusBar translucent={false} barStyle="light-content" />
     </View>
   );
 }

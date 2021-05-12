@@ -1,11 +1,18 @@
 import React from 'react';
 import { enableScreens } from 'react-native-screens';
-import { Text } from 'react-native';
+import { Provider } from 'react-redux';
+import reduxStore from './App/Reduxes';
+import RootContainer from './App/Containers/RootContainer/RootContainer';
 
 enableScreens();
+const store = reduxStore();
 
 function BrowserApp() {
-  return <Text>Hello</Text>;
+  return (
+    <Provider store={store}>
+      <RootContainer />
+    </Provider>
+  );
 }
 
 export default BrowserApp;

@@ -7,7 +7,7 @@ import Image from 'Components/FastImage/Image';
 import BackArrowButton from 'Components/Button/BackArrowButton';
 import images from 'Themes/Images';
 import { COOL_GREY } from 'Themes/Colors';
-import styles from './SearchBar';
+import styles from './SearchBarStyle';
 import doNothing from 'Utils/doNothing';
 import ClearButton from './ClearButton';
 
