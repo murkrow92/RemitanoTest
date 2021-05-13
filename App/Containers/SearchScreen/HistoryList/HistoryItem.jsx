@@ -2,34 +2,24 @@ import React, { useCallback, useMemo } from 'react';
 import { View, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+import WithBrowserBusiness from 'Business/WithBrowserBussiness';
 import transform from 'Transforms/HistoryItem';
 import OpacityButton from 'Components/Button/OpacityButton';
 import styles from './HistorytemStyles';
 
 function HistoryItem(props) {
-  const { item } = props;
-  const historyItem = useMemo(() => {
-    return transform(item);
-  }, [item]);
-
-  console.log('HISTORY ITEM:', historyItem);
-
+  const { item, goToPage } = props;
   const navigation = useNavigation();
+  const historyItem = transform(item);
 
-  function gotoHistoryDetail() {
-    navigation.navigate('HistoryDetailScreen', {
-      historyItem: historyItem
-    });
+  function onPress() {
+    goToPage(historyItem.value);
+    navigation.goBack();
   }
-
-  const memorizedGotoHistoryDetail = useCallback(gotoHistoryDetail, [
-    navigation,
-    historyItem
-  ]);
 
   return (
     <OpacityButton
-      onPress={memorizedGotoHistoryDetail}
+      onPress={onPress}
       isDelayPressIn={true}
       style={styles.historyItemContainer}>
       <View style={styles.historyItemContentContainer}>
@@ -41,4 +31,4 @@ function HistoryItem(props) {
   );
 }
 
-export default HistoryItem;
+export default WithBrowserBusiness(HistoryItem);

@@ -10,7 +10,17 @@ function WithBrowserBusiness(OriginalComponent) {
       dispatch(BrowserActions.goToHomePage());
     }
 
-    return <OriginalComponent goToHomePage={goToHomePage} {...props} />;
+    function goToPage(url) {
+      dispatch(BrowserActions.goToPage(url));
+    }
+
+    return (
+      <OriginalComponent
+        goToPage={goToPage}
+        goToHomePage={goToHomePage}
+        {...props}
+      />
+    );
   }
 
   return WrappedComponent;

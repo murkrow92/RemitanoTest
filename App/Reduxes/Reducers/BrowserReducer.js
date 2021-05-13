@@ -24,6 +24,13 @@ const gotoHomePage = (state, action) => {
   });
 };
 
+const gotoPage = (state, action) => {
+  const { url } = action;
+  return state.merge({
+    currentPage: url
+  });
+};
+
 const onSearch = (state, action) => {
   const { query } = action;
   return state.merge({
@@ -33,5 +40,6 @@ const onSearch = (state, action) => {
 
 export const reducer = createReducer(INITIAL_STATE, {
   [BrowserTypes.GO_TO_HOME_PAGE]: gotoHomePage,
+  [BrowserTypes.GO_TO_PAGE]: gotoPage,
   [BrowserTypes.SEARCH]: onSearch
 });
