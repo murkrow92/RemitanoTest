@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { View, TextInput } from 'react-native';
 import { useSelector } from 'react-redux';
 
+import { useNavigation } from '@react-navigation/native';
 import WithSearchBusiness from 'Business/WithSearchBusiness';
+import WithBrowserBusiness from 'Business/WithBrowserBussiness';
 import Image from 'Components/FastImage/Image';
-import BackArrowButton from 'Components/Button/BackArrowButton';
 import images from 'Themes/Images';
 import { COOL_GREY } from 'Themes/Colors';
 import doNothing from 'Utils/doNothing';
@@ -13,8 +14,15 @@ import ClearButton from './ClearButton';
 import styles from './SearchBarStyle';
 
 function SearchBar(props) {
-  const { onSearch } = props;
+  const { onSearch, goToPage } = props;
+  const navigation = useNavigation();
   const query = useSelector(state => state.browser.query);
+
+  const onSubmit = ({ nativeEvent }) => {
+    const { text } = nativeEvent;
+    goToPage(text);
+    navigation.goBack();
+  };
 
   return (
     <View style={styles.productSearchBarContainer}>
@@ -24,6 +32,7 @@ function SearchBar(props) {
           placeholder="Tìm kiếm hoặc nhập địa chỉ web"
           placeholderTextColor={COOL_GREY}
           blurOnSubmit
+          onSubmitEditing={onSubmit}
           numberOfLines={1}
           selectionColor="white"
           underlineColorAndroid="transparent"
@@ -47,4 +56,4 @@ SearchBar.propTypes = {
   onSearch: PropTypes.func
 };
 
-export default WithSearchBusiness(SearchBar);
+export default WithBrowserBusiness(WithSearchBusiness(SearchBar));

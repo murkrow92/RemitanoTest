@@ -11,6 +11,7 @@ function SeparatorComponent(props) {
 
 function HistoryList(props) {
   const searchResult = useSelector(state => state.browser.searchResult);
+  console.log('SEARCH RESULT:', searchResult);
 
   function renderHistoryItem({ item }) {
     return <HistoryItem item={item} />;

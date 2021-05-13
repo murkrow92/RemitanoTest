@@ -3,6 +3,7 @@ import Immutable from 'seamless-immutable';
 import lodash from 'lodash';
 import score from 'string-score';
 import { BrowserTypes } from 'Reduxes/Actions/BrowserActions';
+import { isValidUrl } from 'Utils/url';
 
 const DEFAULT_HOME_PAGE = 'https://google.com';
 const DEFAULT_FACEBOOK_PAGE = 'https://facebook.com';
@@ -29,11 +30,15 @@ const gotoHomePage = (state, action) => {
 
 const gotoPage = (state, action) => {
   const { url } = action;
+  const googleSearchUrl = `https://www.google.com/search?q=${url}`;
+  const currentPage = isValidUrl(url) ? url : googleSearchUrl;
   return state
     .merge({
-      currentPage: url
+      currentPage: currentPage
     })
-    .updateIn(['history'], history => history.concat(url));
+    .updateIn(['history'], history => {
+      return [currentPage, ...history];
+    });
 };
 
 const onSearch = (state, action) => {
@@ -43,9 +48,6 @@ const onSearch = (state, action) => {
   const searchResult =
     query.length > 0
       ? lodash.filter(history, function (element) {
-          console.log('ELEMENT:', element);
-          console.log('query:', query);
-          console.log(score(element, query, 0.5));
           return score(element, query, 0.5) > 0.2;
         })
       : history;
