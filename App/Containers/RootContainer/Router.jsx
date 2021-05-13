@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import doNothing from 'Utils/doNothing';
 import HomeScreen from '../HomeScreen/HomeScreen';
+import SearchScreen from '../SearchScreen/SearchScreen';
 
 const MainStack = createStackNavigator();
 
@@ -12,6 +13,7 @@ function Router({ onStateChange }) {
     <NavigationContainer onStateChange={onStateChange}>
       <MainStack.Navigator headerMode="none" initialRouteName="HomeScreen">
         <MainStack.Screen name="HomeScreen" component={HomeScreen} />
+        <MainStack.Screen name="SearchScreen" component={SearchScreen} />
       </MainStack.Navigator>
     </NavigationContainer>
   );

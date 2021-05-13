@@ -13,7 +13,7 @@ function HeaderBar(props) {
   const navigation = useNavigation();
 
   function onPress() {
-    navigation.goBack();
+    navigation.navigate('SearchScreen');
   }
 
   return (

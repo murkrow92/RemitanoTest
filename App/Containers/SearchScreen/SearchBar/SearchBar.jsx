@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { View, TextInput } from 'react-native';
 import { useSelector } from 'react-redux';
@@ -7,13 +7,16 @@ import Image from 'Components/FastImage/Image';
 import BackArrowButton from 'Components/Button/BackArrowButton';
 import images from 'Themes/Images';
 import { COOL_GREY } from 'Themes/Colors';
-import styles from './SearchBarStyle';
 import doNothing from 'Utils/doNothing';
 import ClearButton from './ClearButton';
+import styles from './SearchBarStyle';
 
 function SearchBar(props) {
-  const { onChangeText } = props;
-  const query = useSelector(state => state.product.query);
+  const [query, setQuery] = useState('');
+
+  function onChangeText(text) {
+    setQuery(text);
+  }
 
   return (
     <View style={styles.productSearchBarContainer}>
