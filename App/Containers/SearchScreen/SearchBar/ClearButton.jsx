@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'Components/FastImage/Image';
 import { useSelector } from 'react-redux';
 import { View } from 'react-native';
+import WithSearchBusiness from 'Business/WithSearchBusiness';
 import images from 'Themes/Images';
 import doNothing from 'Utils/doNothing';
 import OpacityButton from 'Components/Button/OpacityButton';
@@ -9,7 +10,7 @@ import styles from './ClearButtonStyle';
 
 function ClearButton(props) {
   const { onSearch } = props;
-  const query = useSelector(state => state.product.query);
+  const query = useSelector(state => state.browser.query);
 
   function onPress() {
     onSearch('');
@@ -32,4 +33,4 @@ OpacityButton.defaultProps = {
   onSearch: doNothing
 };
 
-export default ClearButton;
+export default WithSearchBusiness(ClearButton);

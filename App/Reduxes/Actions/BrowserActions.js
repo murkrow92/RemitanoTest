@@ -1,7 +1,8 @@
 import { createActions } from 'reduxsauce';
 
 const { Types, Creators } = createActions({
-  goToHomePage: []
+  goToHomePage: [],
+  search: ['query']
 });
 
 export const BrowserTypes = Types;

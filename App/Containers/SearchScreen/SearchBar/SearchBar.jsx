@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { View, TextInput } from 'react-native';
 import { useSelector } from 'react-redux';
 
+import WithSearchBusiness from 'Business/WithSearchBusiness';
 import Image from 'Components/FastImage/Image';
 import BackArrowButton from 'Components/Button/BackArrowButton';
 import images from 'Themes/Images';
@@ -12,19 +13,15 @@ import ClearButton from './ClearButton';
 import styles from './SearchBarStyle';
 
 function SearchBar(props) {
-  const [query, setQuery] = useState('');
-
-  function onChangeText(text) {
-    setQuery(text);
-  }
+  const { onSearch } = props;
+  const query = useSelector(state => state.browser.query);
 
   return (
     <View style={styles.productSearchBarContainer}>
-      <BackArrowButton />
       <View style={styles.searchInputContainer}>
         <Image source={images.iconSearch} style={styles.iconArrowSearch} />
         <TextInput
-          placeholder="Nhập tên, mã sản phẩm"
+          placeholder="Tìm kiếm hoặc nhập địa chỉ web"
           placeholderTextColor={COOL_GREY}
           blurOnSubmit
           numberOfLines={1}
@@ -33,7 +30,7 @@ function SearchBar(props) {
           autoFocus
           keyboardType="default"
           style={styles.searchInput}
-          onChangeText={onChangeText}
+          onChangeText={onSearch}
           value={query}
         />
         <ClearButton />
@@ -43,15 +40,11 @@ function SearchBar(props) {
 }
 
 SearchBar.defaultProps = {
-  onChangeText: doNothing,
-  onDeletePress: doNothing,
-  onBackPress: doNothing
+  onSearch: doNothing
 };
 
 SearchBar.propTypes = {
-  onChangeText: PropTypes.func,
-  onDeletePress: PropTypes.func,
-  onBackPress: PropTypes.func
+  onSearch: PropTypes.func
 };
 
-export default SearchBar;
+export default WithSearchBusiness(SearchBar);
