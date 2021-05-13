@@ -26,6 +26,9 @@ function HistoryItem(props) {
         <Text numberOfLines={1} style={styles.historyItemTitle}>
           {historyItem.title}
         </Text>
+        <Text numberOfLines={1} style={styles.historyItemContent}>
+          {historyItem.value}
+        </Text>
       </View>
     </OpacityButton>
   );

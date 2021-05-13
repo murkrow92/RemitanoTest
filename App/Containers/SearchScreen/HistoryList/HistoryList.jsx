@@ -10,15 +10,11 @@ function SeparatorComponent(props) {
 }
 
 function HistoryList(props) {
-  const history = useSelector(state => state.browser.history);
+  const searchResult = useSelector(state => state.browser.searchResult);
 
   function renderHistoryItem({ item }) {
     return <HistoryItem item={item} />;
   }
-
-  const memoizedValue = useMemo(() => {
-    return renderHistoryItem;
-  }, []);
 
   const extract = (item, index) => index.toString();
   return (
@@ -33,8 +29,8 @@ function HistoryList(props) {
       showsVerticalScrollIndicator={false}
       showsHorizontalScrollIndicator={false}
       keyboardShouldPersistTaps="always"
-      data={history}
-      renderItem={memoizedValue}
+      data={searchResult}
+      renderItem={renderHistoryItem}
       keyExtractor={extract}
       ItemSeparatorComponent={SeparatorComponent}
     />

@@ -1,7 +1,13 @@
 import { StyleSheet } from 'react-native';
 import { WIDTH_RATIO } from 'Config/Dimens';
-import { FONT_SF_PRO_TEXT_REGULAR } from 'Themes/Fonts';
-import { DARK_GREY, WHITE } from 'Themes/Colors';
+import { FONT_SF_PRO_TEXT_BOLD, FONT_SF_PRO_TEXT_REGULAR } from 'Themes/Fonts';
+import {
+  DARK_GREY,
+  PALE_GREY,
+  PUMPKIN_ORANGE,
+  SILVER,
+  WHITE
+} from 'Themes/Colors';
 
 export default StyleSheet.create({
   historyItemContainer: {
@@ -20,8 +26,17 @@ export default StyleSheet.create({
     backgroundColor: 'transparent'
   },
   historyItemTitle: {
-    fontFamily: FONT_SF_PRO_TEXT_REGULAR,
+    fontFamily: FONT_SF_PRO_TEXT_BOLD,
     fontSize: 14,
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    lineHeight: 19,
+    letterSpacing: -0.15,
+    color: PUMPKIN_ORANGE
+  },
+  historyItemContent: {
+    fontFamily: FONT_SF_PRO_TEXT_REGULAR,
+    fontSize: 12,
     fontWeight: 'normal',
     fontStyle: 'normal',
     lineHeight: 19,
