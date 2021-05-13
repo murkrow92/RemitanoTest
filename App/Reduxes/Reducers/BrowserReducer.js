@@ -26,9 +26,11 @@ const gotoHomePage = (state, action) => {
 
 const gotoPage = (state, action) => {
   const { url } = action;
-  return state.merge({
-    currentPage: url
-  });
+  return state
+    .merge({
+      currentPage: url
+    })
+    .updateIn(['history'], history => history.concat(url));
 };
 
 const onSearch = (state, action) => {
